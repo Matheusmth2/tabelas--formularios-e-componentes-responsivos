@@ -1,0 +1,142 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a0db31;
+    padding: 10px 20px;
+}
+.logo {
+    font-size: 1.5rem;
+    color: #fff;
+}
+.navlinks {
+    display: flex;
+    list-style: none;
+}
+.navlinks li {
+    margin-left: 0 15px;
+}
+.navlinks a {
+    color: #fff;
+    text-decoration: none;
+}
+.hamburguer {
+    display: none;
+    cursor: pointer;
+}
+.hamburguer div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links.nav-active {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .hamburguer {
+        display: block;
+    }
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+} 
+.contact-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+.contact-form button {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #a0db31;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 10px;
+    }
+}
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.pricing-table th, .pricing-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+.pricing-table th {
+    background-color: #a0db31;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .pricing-table thead{
+        display: none;
+    }
+    .pricing-table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .pricing-table td {
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+    .pricing-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+.responsive-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+@media (min-width: 1024px) {
+    .responsive-text {
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 600px){
+    .responsive-text {
+        font-size: 1.25rem;
+    }
+}
